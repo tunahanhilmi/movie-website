@@ -1,0 +1,242 @@
+body{
+    background-color: #050505;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family:  nova,Helvetica,Arial,sans-serif;
+    font-size: 80%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+    padding: 5px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100%;
+}
+.navbar-left, .navbar-right{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 120px;
+    margin-right: 45px;
+}
+
+.navbar-left ul{
+    position: sticky;
+    
+}
+.navbar-left ul li{
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    margin-right: 45px;
+    position: relative;
+}
+.navbar-left ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar-left ul li::after{
+    content: '';
+    height: 1px;
+    width: 0%;
+    background: #7efff5;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+}
+.navbar-left ul li:hover:after{
+    width: 100%;
+}
+.searchbox{
+    background: #000;
+    width: 350px;
+    border-radius: 20px 0;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border: 1px solid #626262;
+}
+.searchbox img{
+    width: 18px;
+
+}
+.searchbox input{
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    color: #fff;
+}
+.container{
+    flex-basis: 50%;
+    width: 50%;
+    height: auto;
+    background-color: #111111;
+    justify-content: space-between;
+    display: flex;
+    position: hidden;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 6px;
+    overflow: hidden;
+    color: aliceblue;
+    align-items: center;
+}
+.row{
+
+    z-index: 100%;
+    color: #fff;
+    align-items: center;
+}
+.row p{
+    margin: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 96%;
+    font-size: 15px;
+}
+.row p a{
+    color: #7efff5;
+    text-decoration: none;
+}
+
+.form{
+    flex-basis: 50%;
+    width: 50%;
+    height: auto;
+    margin: 20px;
+    float: right;
+    padding: 20px;
+    /*border: 1px solid #626262;
+    border-radius: 0 10px;*/
+}
+.form input, textarea, select{
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    color: #fff;
+    border: 2px solid #0abde3;
+    border-radius: 0 10px;
+    margin-top: 5px;
+}
+
+select{
+    margin-bottom: 15px;
+}
+.form textarea{
+    height: 150px;
+    resize: none;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.form .send{
+    width: 80px;
+    float: right;
+    border: 2px solid #0abde3;
+}
+.photo {
+    padding-top: 100px;
+    padding-left: 70px;;
+    width: 50%;
+}
+.photo img{
+    width: 31vh;
+    max-width: 31vh;
+}
+
+
+@media only screen  and (min-width:150px) and (max-width:768px)
+{
+    body{
+        font-size: medium;
+    }
+    .container, nav{
+        width: 87%;
+        justify-content: center;
+        position: relative;
+        margin: 10px;
+        margin-bottom: 40px;
+    }
+    .row{
+        margin-bottom: 10px;
+    }
+    .container{
+        margin-left: 25px;
+    }
+    .navbar-left{
+        margin-right: 100px;
+    }
+    .searchbox{
+        width: 100%;
+    }
+    .logo{
+        display: none;
+    }
+    footer{
+        width: 100%;
+        justify-content: center;
+        position: fixed;
+    }
+    
+    .row p, .form, .photo{
+        float: none;
+        position: relative;
+        margin: auto;
+        margin-top: 10px;
+        width: 90%;
+        max-width: 450px;
+    }
+    .photo img{
+        width: auto;
+        max-width: 200px;
+    }
+    .photo{
+        max-width: 300px;
+        display: none;
+    }
+    .navbar-left ul li{
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 10px 0;
+}
